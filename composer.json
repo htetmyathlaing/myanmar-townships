@@ -1,0 +1,32 @@
+{
+    "name": "htetmyathlaing/myanmar-townships",
+    "description": "Laravel package for Myanmar Townships",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Htet Myat Hlaing",
+            "email": "htetmyathlaing.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "HtetMyatHlaing\\MyanmarTownships\\": "src/",
+            "HtetMyatHlaing\\MyanmarTownships\\Database\\Seeders\\": "src/database/seeders/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HtetMyatHlaing\\MyanmarTownships\\Providers\\MyanmarTownshipServiceProvider"
+            ],
+            "aliases": {
+                "MyanmarTownship": "HtetMyatHlaing\\MyanmarTownships\\Facades\\MyanmarTownship"
+            }
+        }
+    },
+    "minimum-stability": "dev"
+}
