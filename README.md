@@ -28,7 +28,7 @@ MyanmarTownship Facade တွင် အောက်ပါ method သုံးခ
  - searchStates
  
  ### Search Options
- ှSearch ပြုလုပ်ရာတွင် options များထည့်သွင်း အသုံးပြုနိုင်သည်။
+ Search ပြုလုပ်ရာတွင် options များထည့်သွင်း အသုံးပြုနိုင်သည်။
  ```
     MyanmarTownship::searchTownships('က' , ['keys' => ['name_mm']]);
 ```
