@@ -32,7 +32,7 @@ MyanmarTownship Facade တွင် အောက်ပါ method သုံးခ
  ```
     MyanmarTownship::searchTownships('က' , ['keys' => ['name_mm']]);
 ```
-အောက်ပါ options များကို method အားလုံးတွင် အသုံးပြုနိုင်။
+အောက်ပါ options များကို method အားလုံးတွင် အသုံးပြုနိုင်သည်။
 | key      | type    | options   | Default Value |
 | -------- | ------- | --------- | ------------- |
 | order    | string  | asc, desc | asc           |
