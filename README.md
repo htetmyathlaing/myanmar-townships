@@ -63,17 +63,40 @@ searchStates method တွင် အောက်ပါ options များက�
  ## Traits
  ### HasTownship
  township_id ရှိတဲ့ မည့်သည့် model တွင် မဆို HasTownship trait ကို အသုံးပြုနိုင်သည်။
- ### HasTownshipPolyMorph
- Polymorhpic Relation အဖြစ် သုံးမည်ဆိုလျှင် အသုံးပြုမည့် Model တွင် HasTownshipPolyMorph ကို အသုံးပြုနိုင်သည်။
+ ### HaveTownships
+ Polymorhpic Relation အဖြစ် သုံးမည်ဆိုလျှင် အသုံးပြုမည့် Model တွင် HaveTownships trait ကို အသုံးပြုနိုင်သည်။
+
+ #### Adding Single Township
 
  ```
-    $model->saveTownship($townsip)
+    $model->saveTownship($township)
 ```
 OR
  ```
     $model->saveTownship($townshipId)
 ```
 
+ #### Removing Single Township
+
+ ```
+    $model->removeTownship($township)
+```
+OR
+ ```
+    $model->removeTownship($townshipId)
+```
+
+#### Adding Multiples Townships
+
+ ```
+    $model->saveTownships($townshipIdsArray)
+```
+
+#### Removing Multiple Townships
+
+ ```
+    $model->removeTownships($townshipIdsArray)
+```
 
 
  
