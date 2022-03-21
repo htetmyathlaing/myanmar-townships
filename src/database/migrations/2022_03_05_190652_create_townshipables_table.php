@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('townshipables', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedBigInteger('township_id');
             $table->morphs('townshipable');
             $table->timestamps();
             $table->softDeletes();
