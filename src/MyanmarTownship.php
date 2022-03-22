@@ -2,8 +2,8 @@
 
 namespace HtetMyatHlaing\MyanmarTownships;
 
+use Illuminate\Database\Eloquent\Builder;
 use HtetMyatHlaing\MyanmarTownships\Models\State;
-use Illuminate\Contracts\Database\Eloquent\Builder;
 use HtetMyatHlaing\MyanmarTownships\Models\District;
 use HtetMyatHlaing\MyanmarTownships\Models\Township;
 
