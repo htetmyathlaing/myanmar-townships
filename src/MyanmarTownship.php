@@ -31,11 +31,13 @@ class MyanmarTownship
         $paginate = $options['paginate'] ?? 0;
         $sort = $options['sort'] ?? 'name_mm';
         $order = $options['order'] ?? 'asc';
-        $with = !isset($options['with']) || !is_array($options['with']) ? $options['with'] : [];
+        $with = isset($options['with']) && is_array($options['with']) ? $options['with'] : [];
+
         if ($search) {
             if (!$keys) {
                 $keys = ['name_en', 'name_mm'];
             }
+
             $query = $query->where(function ($query) {
                 $query;
             });
@@ -48,7 +50,7 @@ class MyanmarTownship
         $query = $query->orderBy($sort, $order);
 
         if ($with) {
-            $query =  $query->with('townships');
+            $query =  $query->with($with);
         }
 
         if ($paginate) {
