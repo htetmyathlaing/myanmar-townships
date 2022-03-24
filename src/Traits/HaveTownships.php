@@ -17,7 +17,7 @@ trait HaveTownships
             $township = $township->id;
         }
         if (is_numeric($township)) {
-            $this->townships()->sync([$township]);
+            $this->townships()->attach([$township]);
             return true;
         }
 
@@ -27,7 +27,7 @@ trait HaveTownships
     public function saveTownships(array $imageIds)
     {
         if (is_array($imageIds)) {
-            $this->images()->sync($imageIds);
+            $this->images()->attach($imageIds);
             return true;
         }
 
@@ -50,9 +50,7 @@ trait HaveTownships
     public function removeTownships(array $removedTownshipIds)
     {
         if (is_array($removedTownshipIds)) {
-            $originalIds = $this->townships()->pluck('id');
-            $townshipIds = $originalIds->diff($removedTownshipIds);
-            $this->townships()->sync($townshipIds);
+            $this->townships()->detach($removedTownshipIds);
             return true;
         }
 
